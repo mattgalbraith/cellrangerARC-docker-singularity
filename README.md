@@ -14,7 +14,7 @@ Global File Limit: 10k per GB RAM. User Limit: 64 times the number of CPUs.
 See also: https://www.10xgenomics.com/support/software/cell-ranger-arc/latest/tutorials/cr-arc-tutorial-in#sitecheck
 
 #### Build platform note:
-This image is intended to be built on a MacBook Pro (Apple Silicon, arm64) but run on a Linux HPC (x86_64). Cell Ranger ARC does not ship arm64 binaries, so the image must be built and tagged explicitly for `linux/amd64` — otherwise Docker Desktop will build natively for arm64 and the binaries will fail (or silently fall back to slow emulation) on the HPC. Pass `--platform=linux/amd64` on every `docker build` and `docker run` command below; the Dockerfile itself also pins `--platform=linux/amd64` on its `FROM` lines as a second safeguard.
+This image is intended to be built on a MacBook Pro (Apple Silicon, arm64) but run on a Linux HPC (x86_64). Cell Ranger ARC does not ship arm64 binaries, so the image must be built and tagged explicitly for `linux/amd64` — otherwise Docker Desktop will build natively for arm64 and the binaries will fail (or silently fall back to slow emulation) on the HPC. Pass `--platform=linux/amd64` on every `docker build` command below; the Dockerfile itself also pins `--platform=linux/amd64` on its `FROM` lines as a second safeguard.
 
 ### Reference data.
 See https://www.10xgenomics.com/support/software/cell-ranger-arc/downloads for latest  
@@ -59,7 +59,7 @@ https://www.10xgenomics.com/support/software/cell-ranger-arc/latest/tutorials/cr
 
 #### To build image from the command line:
 ``` bash
-# Assumes current working directory is the top-level cellranger-arc-docker-singularity directory
+# Assumes current working directory is the top-level cellrangerARC-docker-singularity directory
 # --platform=linux/amd64 forces an x86_64 build even when building on Apple Silicon,
 # since Cell Ranger ARC has no arm64 binaries and this image needs to run on a Linux HPC
 docker build --platform=linux/amd64 \
