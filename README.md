@@ -1,4 +1,4 @@
-[![Docker Image CI](https://github.com/mattgalbraith/cellranger-arc-docker-singularity/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mattgalbraith/cellranger-arc-docker-singularity/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://github.com/mattgalbraith/cellrangerARC-docker-singularity/actions/workflows/docker-image.yml/badge.svg)](https://github.com/mattgalbraith/cellrangerARC-docker-singularity/actions/workflows/docker-image.yml)
 
 # cellrangerARC-docker-singularity
 
